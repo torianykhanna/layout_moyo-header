@@ -1,3 +1,101 @@
+:root {
+  --blue: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  font-variation-settings: 'wdth' 100;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header:hover {
+  box-shadow: 0 2px 0 0 var(--blue);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+img {
+  display: block;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+nav li:first-child {
+  margin-left: 0;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link:hover {
+  color: var(--blue);
+}
+
+.nav-link.is-active {
+  color: var(--blue);
+  position: relative;
+}
+
+.nav-link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--blue);
+  border-radius: 8px;
+}
+
+.nav-link[data-qa='hover']:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    margin: 0 30px;
+  }
 }
