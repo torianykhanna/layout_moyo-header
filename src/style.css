@@ -25,6 +25,9 @@ body {
 
 .header:hover {
   box-shadow: 0 2px 0 0 var(--blue);
+  width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
 }
 
 .logo-link {
