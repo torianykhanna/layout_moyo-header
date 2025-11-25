@@ -23,13 +23,6 @@ body {
   margin: 0 auto;
 }
 
-.header:hover {
-  box-shadow: 0 2px 0 0 var(--blue);
-  width: 100%;
-  padding: 0 50px;
-  box-sizing: border-box;
-}
-
 .logo-link {
   display: flex;
   align-items: center;
@@ -73,11 +66,12 @@ body {
   align-items: center;
 }
 
-.nav-link:hover {
+.nav-link.is-active {
+  position: relative;
   color: var(--blue);
 }
 
-.nav-link.is-active {
+.nav-link:hover {
   color: var(--blue);
 }
 
@@ -92,12 +86,8 @@ body {
   border-radius: 8px;
 }
 
-.nav-link[data-qa='hover']:hover::after {
-  width: 100%;
-}
-
 @media (max-width: 1024px) {
   .header {
-    margin: 0 30px;
+    padding: 0 50px;
   }
 }
