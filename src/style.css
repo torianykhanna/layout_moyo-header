@@ -2,25 +2,28 @@
   --blue: #00acdc;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 12px;
-  font-variation-settings: 'wdth' 100;
 }
 
 .header {
+  width: 100%;
+}
+
+.container-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
-  width: 100%;
-  padding: 0 50px;
-  box-sizing: border-box;
   max-width: 1200px;
-  margin: 0 auto;
+  padding: 0 50px;
 }
 
 .logo-link {
@@ -87,7 +90,7 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .header {
+  .container-header {
     padding: 0 50px;
   }
 }
